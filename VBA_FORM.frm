@@ -4,7 +4,11 @@ Begin {C62A69F0-16DC-11CE-9E98-00AA00574A4F} VBA_FORM
    ClientHeight    =   7800
    ClientLeft      =   45
    ClientTop       =   390
+<<<<<<< HEAD
    ClientWidth     =   6345
+=======
+   ClientWidth     =   5415
+>>>>>>> 556e97d494ce938408287776a3528f332486766c
    OleObjectBlob   =   "VBA_FORM.frx":0000
    StartUpPosition =   1  '所有者中心
 End
@@ -13,14 +17,18 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+<<<<<<< HEAD
 Private Sub AutoRotate_Click()
   Tools.自动旋转角度
 End Sub
 
+=======
+>>>>>>> 556e97d494ce938408287776a3528f332486766c
 Private Sub btn_autoalign_bycolumn_Click()
   autogroup("group", 1).CreateSelection
 End Sub
 
+<<<<<<< HEAD
 Private Sub btn_corners_off_Click()
   Tools.corner_off
 End Sub
@@ -31,6 +39,9 @@ End Sub
 
 
 Private Sub CB_AQX_MouseDown(ByVal Button As Integer, ByVal Shift As Integer, ByVal x As Single, ByVal y As Single)
+=======
+Private Sub CB_AQX_MouseDown(ByVal Button As Integer, ByVal Shift As Integer, ByVal X As Single, ByVal Y As Single)
+>>>>>>> 556e97d494ce938408287776a3528f332486766c
   If Button = 2 Then
     Tools.guideangle ActiveSelectionRange, 0#   ' 右键 0距离贴紧
   ElseIf Shift = fmCtrlMask Then
@@ -57,10 +68,13 @@ Private Sub CB_JHDX_Click()
   Tools.交换对象
 End Sub
 
+<<<<<<< HEAD
 Private Sub CB_make_sizes_Click()
   Tools.Make_Sizes
 End Sub
 
+=======
+>>>>>>> 556e97d494ce938408287776a3528f332486766c
 Private Sub CB_PLBZ_Click()
   Tools.批量标注
 End Sub
@@ -86,7 +100,11 @@ Private Sub CB_VBA_Click()
   MsgBox "你好 CorelVBA!"
 End Sub
 
+<<<<<<< HEAD
 Private Sub CB_VBA_MouseMove(ByVal Button As Integer, ByVal Shift As Integer, ByVal x As Single, ByVal y As Single)
+=======
+Private Sub CB_VBA_MouseMove(ByVal Button As Integer, ByVal Shift As Integer, ByVal X As Single, ByVal Y As Single)
+>>>>>>> 556e97d494ce938408287776a3528f332486766c
   CB_VBA.BackColor = RGB(255, 0, 0)
 End Sub
 
