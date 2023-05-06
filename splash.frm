@@ -6,13 +6,14 @@ Begin {C62A69F0-16DC-11CE-9E98-00AA00574A4F} splash
    ClientTop       =   330
    ClientWidth     =   8100
    OleObjectBlob   =   "splash.frx":0000
-   StartUpPosition =   1  'ËùÓĞÕßÖĞĞÄ
+   StartUpPosition =   1  'æ‰€æœ‰è€…ä¸­å¿ƒ
 End
 Attribute VB_Name = "splash"
 Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+
 #If VBA7 Then
     Private Declare PtrSafe Function ShellExecute Lib "shell32.dll" Alias "ShellExecuteA" (ByVal hWnd As Long, ByVal lpOperation As String, ByVal lpFile As String, ByVal lpParameters As String, ByVal lpDirectory As String, ByVal nShowCmd As Long) As Long
     Private Declare PtrSafe Function DrawMenuBar Lib "user32" (ByVal hWnd As Long) As Long
@@ -52,15 +53,15 @@ Private Sub UserForm_Initialize()
 
 End Sub
 
-' ¾­¹ıÓÅ»¯¸ÄĞ´£¬ÃãÇ¿¹»ÓÃÁË
+' ç»è¿‡ä¼˜åŒ–æ”¹å†™ï¼Œå‹‰å¼ºå¤Ÿç”¨äº†
 Private Sub UserForm_Activate()
-  Me.text1 = Me.text1 + "¹¦ÄÜ:°´Ãæ»ıÅÅÁĞ"
+  Me.text1 = Me.text1 + "åŠŸèƒ½:æŒ‰é¢ç§¯æ’åˆ—"
   
   Unload VBA_FORM
   ActiveWindow.Refresh:    Application.Refresh
   DoEvents
 
-  Tools.°´Ãæ»ıÅÅÁĞ 50
+  Tools.æŒ‰é¢ç§¯æ’åˆ— 50
   
   'Close the window.
   Unload Me

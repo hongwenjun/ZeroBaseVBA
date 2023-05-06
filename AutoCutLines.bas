@@ -9,7 +9,7 @@ Public Sub AutoCutLines()
   Nodes_TO_TSP
   START_Cut_Line_Algorithm 3#
   
-  'ÑÓÊ±500ºÁÃë£¬Èç¹ûµçÄÔ¹»¿ì£¬¿ÉÒÔµ÷Õûµ½100ms
+  'å»¶æ—¶500æ¯«ç§’ï¼Œå¦‚æœç”µè„‘å¤Ÿå¿«ï¼Œå¯ä»¥è°ƒæ•´åˆ°100ms
   Sleep 500
   TSP_TO_DRAW_LINES
 End Sub
@@ -39,7 +39,7 @@ Private Function Nodes_TO_TSP()
     f.WriteLine TSP
     f.Close
     
-    '// Ë¢ĞÂÒ»ÏÂÎÄ¼şÁ÷£¬ÑÓÊ±µÄĞ§¹û
+    '// åˆ·æ–°ä¸€ä¸‹æ–‡ä»¶æµï¼Œå»¶æ—¶çš„æ•ˆæœ
     Set f = fs.OpenTextFile("C:\TSP\CDR_TO_TSP", 1, False)
     Dim str
     str = f.ReadAll()
@@ -53,7 +53,7 @@ ErrorHandler:
     On Error Resume Next
 End Function
 
-'//  TSP¹¦ÄÜ»­Ïß-¶àÏß¶Î
+'//  TSPåŠŸèƒ½ç”»çº¿-å¤šçº¿æ®µ
 Private Function TSP_TO_DRAW_LINES()
   On Error GoTo ErrorHandler
   ActiveDocument.BeginCommandGroup: Application.Optimization = True
@@ -83,7 +83,7 @@ Private Function TSP_TO_DRAW_LINES()
     Set line = ActiveLayer.CreateLineSegment(x, y, x1, y1)
     set_line_color line
     
-    ' µ÷ÊÔÏßÌõË³Ğò
+    ' è°ƒè¯•çº¿æ¡é¡ºåº
     puts x, y, (n + 2) / 4
     
   Next
@@ -100,13 +100,13 @@ ErrorHandler:
     On Error Resume Next
 End Function
 
-'// ÔËĞĞ²ÃÇĞÏßËã·¨ Cut_Line_Algorithm.py
+'// è¿è¡Œè£åˆ‡çº¿ç®—æ³• Cut_Line_Algorithm.py
 Private Function START_Cut_Line_Algorithm(Optional ext As Double = 3)
     cmd_line = "python C:\TSP\Cut_Line_Algorithm.py" & " " & ext
     Shell cmd_line
 End Function
 
-'// ÉèÖÃÏßÌõ±ê¼Ç(ÑÕÉ«)
+'// è®¾ç½®çº¿æ¡æ ‡è®°(é¢œè‰²)
 Private Function set_line_color(line As Shape)
   line.Outline.SetProperties Color:=CreateRGBColor(26, 22, 35)
 End Function

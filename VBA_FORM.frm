@@ -1,34 +1,27 @@
 VERSION 5.00
 Begin {C62A69F0-16DC-11CE-9E98-00AA00574A4F} VBA_FORM 
    Caption         =   "Hello_VBA"
-   ClientHeight    =   7800
+   ClientHeight    =   7995
    ClientLeft      =   45
    ClientTop       =   390
-<<<<<<< HEAD
-   ClientWidth     =   6345
-=======
-   ClientWidth     =   5415
->>>>>>> 556e97d494ce938408287776a3528f332486766c
+   ClientWidth     =   6180
    OleObjectBlob   =   "VBA_FORM.frx":0000
-   StartUpPosition =   1  'ËùÓĞÕßÖĞĞÄ
+   StartUpPosition =   1  'æ‰€æœ‰è€…ä¸­å¿ƒ
 End
 Attribute VB_Name = "VBA_FORM"
 Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
-<<<<<<< HEAD
+
 Private Sub AutoRotate_Click()
-  Tools.×Ô¶¯Ğı×ª½Ç¶È
+  Tools.è‡ªåŠ¨æ—‹è½¬è§’åº¦
 End Sub
 
-=======
->>>>>>> 556e97d494ce938408287776a3528f332486766c
 Private Sub btn_autoalign_bycolumn_Click()
   autogroup("group", 1).CreateSelection
 End Sub
 
-<<<<<<< HEAD
 Private Sub btn_corners_off_Click()
   Tools.corner_off
 End Sub
@@ -39,87 +32,77 @@ End Sub
 
 
 Private Sub CB_AQX_MouseDown(ByVal Button As Integer, ByVal Shift As Integer, ByVal x As Single, ByVal y As Single)
-=======
-Private Sub CB_AQX_MouseDown(ByVal Button As Integer, ByVal Shift As Integer, ByVal X As Single, ByVal Y As Single)
->>>>>>> 556e97d494ce938408287776a3528f332486766c
   If Button = 2 Then
-    Tools.guideangle ActiveSelectionRange, 0#   ' ÓÒ¼ü 0¾àÀëÌù½ô
+    Tools.guideangle ActiveSelectionRange, 0#   ' å³é”® 0è·ç¦»è´´ç´§
   ElseIf Shift = fmCtrlMask Then
-    Tools.guideangle ActiveSelectionRange, 4    ' ×ó¼ü°²È«·¶Î§ 4mm
+    Tools.guideangle ActiveSelectionRange, 4    ' å·¦é”®å®‰å…¨èŒƒå›´ 4mm
   Else
-    Tools.guideangle ActiveSelectionRange, -10     ' Ctrl + Êó±ê×ó¼ü
+    Tools.guideangle ActiveSelectionRange, -10     ' Ctrl + é¼ æ ‡å·¦é”®
   End If
 End Sub
 
 Private Sub CB_BZCC_Click()
-  Tools.³ß´ç±ê×¢
+  Tools.å°ºå¯¸æ ‡æ³¨
 End Sub
 
 
 Private Sub CB_ECWZ_Click()
-  Tools.ÌîÈë¾ÓÖĞÎÄ×Ö GetClipBoardString
+  Tools.å¡«å…¥å±…ä¸­æ–‡å­— GetClipBoardString
 End Sub
 
 Private Sub CB_JDZP_Click()
-  Tools.½Ç¶È×ªÆ½
+  Tools.è§’åº¦è½¬å¹³
 End Sub
 
 Private Sub CB_JHDX_Click()
-  Tools.½»»»¶ÔÏó
+  Tools.äº¤æ¢å¯¹è±¡
 End Sub
 
-<<<<<<< HEAD
 Private Sub CB_make_sizes_Click()
   Tools.Make_Sizes
 End Sub
 
-=======
->>>>>>> 556e97d494ce938408287776a3528f332486766c
 Private Sub CB_PLBZ_Click()
-  Tools.ÅúÁ¿±ê×¢
+  Tools.æ‰¹é‡æ ‡æ³¨
 End Sub
 
 Private Sub CB_PLDYJZ_Click()
-  Tools.ÅúÁ¿¶àÒ³¾ÓÖĞ
+  Tools.æ‰¹é‡å¤šé¡µå±…ä¸­
 End Sub
 
 Private Sub CB_PLWZ_Click()
-  Tools.ÅúÁ¿¾ÓÖĞÎÄ×Ö "CorelVBAÅúÁ¿ÎÄ×Ö"
+  Tools.æ‰¹é‡å±…ä¸­æ–‡å­— "CorelVBAæ‰¹é‡æ–‡å­—"
 End Sub
 
 Private Sub CB_QZJZ_Click()
-  Tools.Èº×é¾ÓÖĞÒ³Ãæ
+  Tools.ç¾¤ç»„å±…ä¸­é¡µé¢
 End Sub
 
 
 Private Sub CB_SIZESORT_Click()
-    splash.show 1
+    splash.Show 1
 End Sub
 
 Private Sub CB_VBA_Click()
-  MsgBox "ÄãºÃ CorelVBA!"
+  MsgBox "ä½ å¥½ CorelVBA!"
 End Sub
 
-<<<<<<< HEAD
 Private Sub CB_VBA_MouseMove(ByVal Button As Integer, ByVal Shift As Integer, ByVal x As Single, ByVal y As Single)
-=======
-Private Sub CB_VBA_MouseMove(ByVal Button As Integer, ByVal Shift As Integer, ByVal X As Single, ByVal Y As Single)
->>>>>>> 556e97d494ce938408287776a3528f332486766c
   CB_VBA.BackColor = RGB(255, 0, 0)
 End Sub
 
 
 Private Sub CB_ZDJD_Click()
-  Tools.×Ô¶¯Ğı×ª½Ç¶È
+  Tools.è‡ªåŠ¨æ—‹è½¬è§’åº¦
 End Sub
 
 Private Sub CB_mirror_by_line_Click()
-  Tools.²Î¿¼Ïß¾µÏñ
+  Tools.å‚è€ƒçº¿é•œåƒ
 End Sub
 
 
 Private Sub CommandButton2_Click()
-  Tools.·şÎñÆ÷T
+  Tools.æœåŠ¡å™¨T
 End Sub
 
 Private Sub CommandButton3_Click()
@@ -130,10 +113,10 @@ Private Sub CommandButton3_Click()
     Set shr = ActivePage.Shapes.All
 
     If sr.Shapes.Count = 0 Then
-        shr.CreateSelection 'ËùÓĞ¶ÔÏó
+        shr.CreateSelection 'æ‰€æœ‰å¯¹è±¡
     Else
         shr.RemoveRange sr
-        shr.CreateSelection '²»ÔÚÔ­Ñ¡Ôñ·¶Î§ÄÚµÄ¶ÔÏó
+        shr.CreateSelection 'ä¸åœ¨åŸé€‰æ‹©èŒƒå›´å†…çš„å¯¹è±¡
     End If
 End Sub
 
@@ -142,7 +125,7 @@ Private Sub ExportNodePot_Click()
 End Sub
 
 Private Sub Photo_Form_Click()
-  PhotoForm.show 0
+  PhotoForm.Show 0
 End Sub
 
 Private Sub SetNames_Click()
@@ -151,7 +134,7 @@ End Sub
 
 Private Sub SplitSegment_MouseDown(ByVal Button As Integer, ByVal Shift As Integer, ByVal x As Single, ByVal y As Single)
   If Button = 2 Then
-    MsgBox "×ó¼ü²ğ·ÖÏß¶Î£¬CtrlºÏ²¢Ïß¶Î"
+    MsgBox "å·¦é”®æ‹†åˆ†çº¿æ®µï¼ŒCtrlåˆå¹¶çº¿æ®µ"
   ElseIf Shift = fmCtrlMask Then
     Tools.Split_Segment
   Else
@@ -161,7 +144,7 @@ Private Sub SplitSegment_MouseDown(ByVal Button As Integer, ByVal Shift As Integ
 End Sub
 
 Private Sub Image4_Click()
-    cmd_line = "Notepad  D:\±¸ÍüÂ¼.txt"
+    cmd_line = "Notepad  D:\å¤‡å¿˜å½•.txt"
     Shell cmd_line, vbNormalNoFocus
 End Sub
 
@@ -170,74 +153,78 @@ Private Sub Image5_Click()
 End Sub
 
 Private Sub LevelRuler_Click()
-  Tools.½Ç¶È×ªÆ½
+  Tools.è§’åº¦è½¬å¹³
 End Sub
 
 Private Sub MakeSizes_Click()
-  ZCOPY.show 0
+  ZCOPY.Show 0
 End Sub
 
 Private Sub MirrorLine_Click()
-  Tools.²Î¿¼Ïß¾µÏñ
+  Tools.å‚è€ƒçº¿é•œåƒ
 End Sub
 
 Private Sub SortCount_Click()
-  Tools.°´Ãæ»ıÅÅÁĞ 50
+  Tools.æŒ‰é¢ç§¯æ’åˆ— 50
 End Sub
 
 Private Sub SwapShape_Click()
-  Tools.½»»»¶ÔÏó
+  Tools.äº¤æ¢å¯¹è±¡
 End Sub
 
 
 Private Sub ZNQZ_Click()
-  Tools.ÖÇÄÜÈº×é
+  Tools.æ™ºèƒ½ç¾¤ç»„
 End Sub
 
-Private Sub ¶ÁÈ¡ÎÄ±¾_Click()
+Private Sub è¯»å–æ–‡æœ¬_Click()
   AutoCutLines.AutoCutLines
 End Sub
 
-Sub ¶ÁÈ¡Ã¿Ò»ĞĞÊı¾İ()
+Sub è¯»å–æ¯ä¸€è¡Œæ•°æ®()
     Dim txt As Object, t As Object, path As String
     Set txt = CreateObject("Scripting.FileSystemObject")
     
     Dim a
-    ' Ö¸¶¨Â·¾¶
+    ' æŒ‡å®šè·¯å¾„
     path = "R:\Temp.txt"
-    ' ¡°1¡±±íÊ¾Ö»¶Á´ò¿ª£¬¡°2¡±±íÊ¾Ğ´Èë£¬True±íÊ¾Ä¿±êÎÄ¼ş²»´æÔÚÊ±ÊÇ´´½¨
+    ' â€œ1â€è¡¨ç¤ºåªè¯»æ‰“å¼€ï¼Œâ€œ2â€è¡¨ç¤ºå†™å…¥ï¼ŒTrueè¡¨ç¤ºç›®æ ‡æ–‡ä»¶ä¸å­˜åœ¨æ—¶æ˜¯åˆ›å»º
     Set t = txt.OpenTextFile(path, 1, True)
     '--------------------------
-    ' ¶ÁÈ¡Ã¿Ò»ĞĞ²¢°ÑÄÚÈİÏÔÊ¾³öÀ´
+    ' è¯»å–æ¯ä¸€è¡Œå¹¶æŠŠå†…å®¹æ˜¾ç¤ºå‡ºæ¥
     Do While Not t.AtEndOfStream
 '        a = t.ReadLine
         a = a & t.ReadLine & vbNewLine
     TextBox1.Value = a
     Loop
     '--------------------------
-    ' ´ò¿ªÎÄµµ£¬×¢Òâ¡°notepad.exe ¡±×îºóÓĞ¿Õ¸ñ
+    ' æ‰“å¼€æ–‡æ¡£ï¼Œæ³¨æ„â€œnotepad.exe â€æœ€åæœ‰ç©ºæ ¼
     Shell "notepad.exe " & path, vbNormalFocus
-    ' ÊÍ·Å±äÁ¿
+    ' é‡Šæ”¾å˜é‡
     Set t = Nothing
     Set txt = Nothing
 End Sub
 
 
 
-Private Sub ²ÃÇĞÏß_Click()
+Private Sub è£åˆ‡çº¿_Click()
  AutoCutLines.AutoCutLines
  
 End Sub
 
 
-Private Sub Ëã·¨¼ÆËã_Click()
-  ChatGPT.¼ÆËãĞĞÁĞ
+Private Sub æ‰‹åŠ¨æ‹¼ç‰ˆ_Click()
+  ArrangeForm.Show 0
 End Sub
 
-Private Sub ZĞòÅÅÁĞ_Click()
-    ChatGPT.ZĞòÅÅÁĞ
+Private Sub ç®—æ³•è®¡ç®—_Click()
+  ChatGPT.è®¡ç®—è¡Œåˆ—
 End Sub
 
-Private Sub UĞòÅÅÁĞ_Click()
-  ChatGPT.ÕıÊ½UĞòÅÅÁĞ
+Private Sub Zåºæ’åˆ—_Click()
+    ChatGPT.Zåºæ’åˆ—
+End Sub
+
+Private Sub Uåºæ’åˆ—_Click()
+  ChatGPT.æ­£å¼Uåºæ’åˆ—
 End Sub

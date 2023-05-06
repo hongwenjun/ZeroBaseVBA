@@ -6,13 +6,14 @@ Begin {C62A69F0-16DC-11CE-9E98-00AA00574A4F} ZCOPY
    ClientTop       =   330
    ClientWidth     =   4860
    OleObjectBlob   =   "ZCOPY.frx":0000
-   StartUpPosition =   1  'ËùÓÐÕßÖÐÐÄ
+   StartUpPosition =   1  'æ‰€æœ‰è€…ä¸­å¿ƒ
 End
 Attribute VB_Name = "ZCOPY"
 Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+
 
 Private Sub btn_square_hi_MouseUp(ByVal Button As Integer, ByVal Shift As Integer, ByVal x As Single, ByVal y As Single)
     If get_events("btn_square_hi", Shift, Button) = "exit" Then Exit Sub
